@@ -10,7 +10,7 @@ export function Sidebar() {
   const mostRead = categoriesData.flatMap(c => c.articles).slice(0, 5);
 
   return (
-    <aside className="flex flex-col gap-6 w-full lg:w-80 shrink-0">
+    <aside className="flex flex-col gap-6 w-full">
       {/* Trending Tags */}
       <div className="skeuo-card rounded-[24px] p-6">
         <h3 className="font-bold text-lg uppercase tracking-wide mb-4">Trending Tags</h3>

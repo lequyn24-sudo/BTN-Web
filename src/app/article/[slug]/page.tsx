@@ -18,7 +18,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
     <>
       <Header />
       <main className="flex-1 container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <article className="lg:col-span-2">
             <div className="mb-8">
               <span className="bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-[0_0_10px_rgba(255,107,0,0.5)] mb-4 inline-block">
