@@ -51,10 +51,10 @@ export function Sidebar() {
       {/* Stay Ahead Subscribe */}
       <div className="skeuo-card rounded-[24px] p-6 relative overflow-hidden shrink-0">
         <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/20 blur-2xl rounded-full"></div>
-        <h3 className="font-bold text-xl mb-2 relative z-10 text-white">Stay Ahead in Crypto</h3>
+        <h3 className="font-bold text-xl mb-2 relative z-10 text-foreground">Stay Ahead in Crypto</h3>
         <p className="text-sm text-foreground/70 mb-4 relative z-10">Get the latest news, market updates, and exclusive insights straight to your inbox.</p>
         <form className="flex flex-col gap-3 relative z-10">
-          <input type="email" placeholder="Enter your email" className="bg-black/50 border border-border rounded-md px-4 py-3 text-sm outline-none focus:border-primary text-white" />
+          <input type="email" placeholder="Enter your email" className="bg-card border border-border rounded-md px-4 py-3 text-sm outline-none focus:border-primary text-foreground" />
           <button type="button" className="btn-primary w-full text-center">
             Subscribe
           </button>
@@ -82,7 +82,7 @@ export function Sidebar() {
         <div className="absolute -right-12 -bottom-12 w-40 h-40 bg-yellow-500/10 blur-3xl rounded-full z-0"></div>
         <div className="flex items-center gap-4 relative z-10">
           <div className="flex-1">
-            <h3 className="font-bold text-lg mb-2 text-white group-hover:text-primary transition-colors">Advertise With Us</h3>
+            <h3 className="font-bold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">Advertise With Us</h3>
             <p className="text-[13px] text-foreground/60 mb-4 leading-relaxed">Reach the world's most engaged crypto audience.</p>
             <div className="text-[12px] text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
               Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>

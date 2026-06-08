@@ -24,7 +24,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
               <span className="bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-[0_0_10px_rgba(255,107,0,0.5)] mb-4 inline-block">
                 {article.category}
               </span>
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-white">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-foreground">
                 {article.title}
               </h1>
               <div className="flex flex-wrap items-center gap-4 text-xs text-foreground/60">
@@ -62,7 +62,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
                 In a recent turn of events that has caught the attention of both retail and institutional investors, the cryptocurrency market is demonstrating unprecedented resilience. As adoption metrics continue to climb, we are seeing a structural shift in how digital assets are perceived globally.
               </p>
 
-              <h3 className="text-2xl font-bold text-white mt-10 mb-4">The Impact of Institutional Adoption</h3>
+              <h3 className="text-2xl font-bold text-foreground mt-10 mb-4">The Impact of Institutional Adoption</h3>
               
               <p>
                 Major financial institutions are no longer standing on the sidelines. The influx of capital through regulated vehicles like ETFs has created a new baseline for market stability. This isn't just about price discovery; it's about the fundamental integration of blockchain technology into traditional finance.
@@ -74,7 +74,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
                 </p>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mt-10 mb-4">Looking Ahead</h3>
+              <h3 className="text-2xl font-bold text-foreground mt-10 mb-4">Looking Ahead</h3>
               
               <p>
                 As we move forward, key technical levels remain crucial for short-term traders, but the macro picture suggests a continuing trend of higher lows. Regulatory clarity in major jurisdictions will likely be the next significant catalyst for market movement.

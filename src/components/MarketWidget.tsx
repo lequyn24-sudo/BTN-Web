@@ -81,7 +81,7 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
             
             {/* Text Below Gauge */}
             <div className="flex flex-col items-center mt-1 space-y-1">
-              <span className="text-2xl font-bold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] leading-none">
+              <span className="text-2xl font-bold text-foreground drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] leading-none">
                 {data.fearAndGreed}
               </span>
               <span className={`text-[8px] font-bold uppercase px-2 py-0.5 rounded-full ${
@@ -100,7 +100,7 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
         <div className="flex flex-col border-l border-border/50 pl-4">
           <span className="text-[10px] text-foreground/50 uppercase tracking-wider mb-1 font-medium">BTC Price</span>
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xl font-bold text-white">{data.btcPrice}</span>
+            <span className="text-xl font-bold text-foreground">{data.btcPrice}</span>
             <span className={`text-[10px] font-medium ${data.btcIsUp ? 'text-green-500' : 'text-red-500'}`}>
               {data.btcIsUp ? '▲' : '▼'} {data.btcChange}
             </span>
@@ -125,42 +125,42 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
       <div className="py-4 space-y-3 text-xs border-b border-border/50">
         <div className="flex justify-between">
           <span className="text-foreground/60">Market Cap</span>
-          <span className="font-semibold text-white/90">{data.marketCap}</span>
+          <span className="font-semibold text-foreground/90">{data.marketCap}</span>
         </div>
         <div className="w-full h-[1px] bg-border/30"></div>
         <div className="flex justify-between">
           <span className="text-foreground/60">24h Volume</span>
-          <span className="font-semibold text-white/90">{data.volume24h}</span>
+          <span className="font-semibold text-foreground/90">{data.volume24h}</span>
         </div>
         <div className="w-full h-[1px] bg-border/30"></div>
         <div className="flex justify-between">
           <span className="text-foreground/60">BTC Dominance</span>
-          <span className="font-semibold text-white/90">{data.btcDominance}</span>
+          <span className="font-semibold text-foreground/90">{data.btcDominance}</span>
         </div>
         <div className="w-full h-[1px] bg-border/30"></div>
         <div className="flex justify-between">
           <span className="text-foreground/60">Circulating Supply</span>
-          <span className="font-semibold text-white/90">{data.circulatingSupply}</span>
+          <span className="font-semibold text-foreground/90">{data.circulatingSupply}</span>
         </div>
       </div>
 
       {/* Bottom Section: Tabs & List */}
       <div className="pt-4 flex-1 flex flex-col">
-        <div className="flex bg-[#111] rounded-md p-1 mb-4 text-[10px] font-medium border border-border/30">
+        <div className="flex bg-card rounded-md p-1 mb-4 text-[10px] font-medium border border-border/30">
           <button 
-            className={`flex-1 py-1.5 rounded-sm transition-colors ${activeTab === "Gainers" ? "bg-primary/20 text-primary" : "text-foreground/50 hover:text-white"}`}
+            className={`flex-1 py-1.5 rounded-sm transition-colors ${activeTab === "Gainers" ? "bg-primary/20 text-primary" : "text-foreground/50 hover:text-foreground"}`}
             onClick={() => setActiveTab("Gainers")}
           >
             Top Gainers
           </button>
           <button 
-            className={`flex-1 py-1.5 rounded-sm transition-colors ${activeTab === "Losers" ? "bg-primary/20 text-primary" : "text-foreground/50 hover:text-white"}`}
+            className={`flex-1 py-1.5 rounded-sm transition-colors ${activeTab === "Losers" ? "bg-primary/20 text-primary" : "text-foreground/50 hover:text-foreground"}`}
             onClick={() => setActiveTab("Losers")}
           >
             Top Losers
           </button>
           <button 
-            className={`flex-1 py-1.5 rounded-sm transition-colors ${activeTab === "Viewed" ? "bg-primary/20 text-primary" : "text-foreground/50 hover:text-white"}`}
+            className={`flex-1 py-1.5 rounded-sm transition-colors ${activeTab === "Viewed" ? "bg-primary/20 text-primary" : "text-foreground/50 hover:text-foreground"}`}
             onClick={() => setActiveTab("Viewed")}
           >
             Most Viewed
@@ -176,13 +176,13 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
                   {coin.image ? (
                     <img src={coin.image} alt={coin.symbol} className="w-full h-full object-cover" />
                   ) : (
-                    <span className="text-[10px] font-bold text-white">{coin.symbol.charAt(0)}</span>
+                    <span className="text-[10px] font-bold text-foreground">{coin.symbol.charAt(0)}</span>
                   )}
                 </div>
-                <span className="font-medium text-white/90 truncate">{coin.name}</span>
+                <span className="font-medium text-foreground/90 truncate">{coin.name}</span>
                 <span className="text-[9px] text-foreground/40 shrink-0 uppercase">{coin.symbol}</span>
               </div>
-              <span className="font-medium text-white/80 text-right truncate">{coin.price}</span>
+              <span className="font-medium text-foreground/80 text-right truncate">{coin.price}</span>
               <div className="text-right flex items-center justify-end gap-1">
                 <span className={`text-[8px] ${coin.isUp ? 'text-green-500' : 'text-red-500'}`}>
                   {coin.isUp ? '▲' : '▼'}

@@ -103,7 +103,7 @@ export function Footer() {
               <input 
                 type="email" 
                 placeholder="Enter your email" 
-                className="bg-transparent border border-border rounded-l-md px-3 py-2 text-sm w-full outline-none focus:border-primary text-white" 
+                className="bg-transparent border border-border rounded-l-md px-3 py-2 text-sm w-full outline-none focus:border-primary text-foreground" 
               />
               <button type="button" className="bg-[#ffb042] hover:bg-[#ffa01c] text-black text-sm font-semibold px-4 py-2 rounded-r-md transition-colors whitespace-nowrap">
                 Subscribe

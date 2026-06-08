@@ -49,7 +49,7 @@ export default function ActivityHistoryPage() {
     <div className="flex flex-col gap-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-white mb-2">Activity History</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-2">Activity History</h1>
           <p className="text-foreground/60 text-sm">Review your recent actions and interactions on the platform.</p>
         </div>
         <button className="text-sm font-medium text-primary hover:underline w-fit">
@@ -60,7 +60,7 @@ export default function ActivityHistoryPage() {
       <div className="w-full h-[1px] bg-border/50 my-2"></div>
       
       {/* Timeline */}
-      <div className="bg-black/20 rounded-xl border border-border/50 p-6 md:p-8">
+      <div className="bg-card rounded-xl border border-border/50 p-6 md:p-8">
         <div className="relative border-l border-border/50 ml-4 md:ml-6 space-y-8 pb-4">
           
           {activities.map((activity) => (
@@ -73,14 +73,14 @@ export default function ActivityHistoryPage() {
               {/* Content */}
               <div className="flex flex-col gap-1.5 pt-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                  <span className="text-sm font-medium text-white">{activity.title}</span>
+                  <span className="text-sm font-medium text-foreground">{activity.title}</span>
                   <span className="text-xs text-foreground/50 flex items-center gap-1 shrink-0">
                     <Clock className="w-3 h-3" /> {activity.date}
                   </span>
                 </div>
                 
                 {activity.details && (
-                  <div className="mt-2 p-3 bg-white/5 border border-border/30 rounded-lg text-sm text-foreground/70 italic relative">
+                  <div className="mt-2 p-3 bg-card border border-border/30 rounded-lg text-sm text-foreground/70 italic relative">
                     <div className="absolute top-0 left-4 -translate-y-full w-0 h-0 border-l-[6px] border-r-[6px] border-b-[8px] border-transparent border-b-white/5"></div>
                     "{activity.details}"
                   </div>
@@ -98,7 +98,7 @@ export default function ActivityHistoryPage() {
         </div>
         
         <div className="flex justify-center mt-8">
-          <button className="px-6 py-2 bg-white/5 border border-border text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          <button className="px-6 py-2 bg-card border border-border text-foreground text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors">
             Load More Activity
           </button>
         </div>

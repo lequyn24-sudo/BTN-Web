@@ -60,7 +60,7 @@ export default function SubscribePage() {
                     type="text" 
                     id="name" 
                     placeholder="John Doe" 
-                    className="bg-black/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-white"
+                    className="bg-card border border-border/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-foreground"
                   />
                 </div>
 
@@ -70,7 +70,7 @@ export default function SubscribePage() {
                     type="email" 
                     id="email" 
                     placeholder="john@example.com" 
-                    className="bg-black/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-white"
+                    className="bg-card border border-border/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-foreground"
                   />
                 </div>
               </div>

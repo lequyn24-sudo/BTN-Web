@@ -18,7 +18,7 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
       <Header />
       <main className="flex-1 container mx-auto px-4 py-8">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white relative inline-block">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground relative inline-block">
             {category.title}
             <span className="absolute -bottom-2 left-0 w-1/2 h-[3px] bg-primary rounded-full shadow-[0_0_10px_rgba(255,107,0,0.8)]"></span>
           </h1>
@@ -45,7 +45,7 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
                  </div>
               </div>
               <div className="px-3 pb-3 pt-2">
-                <h3 className="font-semibold text-base leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-3 text-white">
+                <h3 className="font-semibold text-base leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-3 text-foreground">
                   {article.title}
                 </h3>
                 <div className="flex items-center gap-2 text-[11px] text-foreground/50">

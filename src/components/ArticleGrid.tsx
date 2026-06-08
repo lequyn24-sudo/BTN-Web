@@ -36,7 +36,7 @@ export function ArticleGrid() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 </div>
                 <div className="px-3 pb-3 pt-2">
-                  <h3 className="font-semibold text-sm leading-snug mb-2 text-white group-hover:text-primary transition-colors line-clamp-3">
+                  <h3 className="font-semibold text-sm leading-snug mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-3">
                     {article.title}
                   </h3>
                   <div className="flex items-center gap-2 text-[10px] text-foreground/50">

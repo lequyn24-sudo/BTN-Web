@@ -27,7 +27,7 @@ export async function HeroSection() {
           <span className="bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full w-max mb-4 shadow-[0_0_10px_rgba(255,107,0,0.5)]">
             Bitcoin News
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 text-white group-hover:text-primary transition-colors">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 text-foreground group-hover:text-primary transition-colors">
             {featuredArticle.title}
           </h1>
           <p className="text-gray-300 max-w-2xl text-sm md:text-base mb-6 line-clamp-2">

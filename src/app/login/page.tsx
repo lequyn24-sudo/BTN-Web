@@ -35,26 +35,26 @@ export default function LoginPage() {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
             
             {/* Toggle Tabs */}
-            <div className="flex bg-black/40 p-1 rounded-xl mb-8 relative">
+            <div className="flex bg-card p-1 rounded-xl mb-8 relative">
               <div 
                 className={`absolute inset-y-1 w-[calc(50%-4px)] bg-white/10 rounded-lg shadow-sm transition-all duration-300 ease-out ${isLogin ? 'left-1' : 'left-[calc(50%+2px)]'}`}
               ></div>
               <button 
                 onClick={() => setIsLogin(true)}
-                className={`flex-1 py-2 text-sm font-medium z-10 transition-colors ${isLogin ? 'text-white' : 'text-foreground/50 hover:text-foreground/80'}`}
+                className={`flex-1 py-2 text-sm font-medium z-10 transition-colors ${isLogin ? 'text-foreground' : 'text-foreground/50 hover:text-foreground/80'}`}
               >
                 Sign In
               </button>
               <button 
                 onClick={() => setIsLogin(false)}
-                className={`flex-1 py-2 text-sm font-medium z-10 transition-colors ${!isLogin ? 'text-white' : 'text-foreground/50 hover:text-foreground/80'}`}
+                className={`flex-1 py-2 text-sm font-medium z-10 transition-colors ${!isLogin ? 'text-foreground' : 'text-foreground/50 hover:text-foreground/80'}`}
               >
                 Create Account
               </button>
             </div>
 
             <div className="mb-8">
-              <h1 className="text-2xl font-bold text-white mb-2">
+              <h1 className="text-2xl font-bold text-foreground mb-2">
                 {isLogin ? 'Welcome back' : 'Join BitcoinInfoNews'}
               </h1>
               <p className="text-sm text-foreground/60">
@@ -75,7 +75,7 @@ export default function LoginPage() {
                       type="text" 
                       required={!isLogin}
                       placeholder="John Doe" 
-                      className="w-full bg-black/50 border border-border/50 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-white placeholder:text-foreground/30"
+                      className="w-full bg-card border border-border/50 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-foreground placeholder:text-foreground/30"
                     />
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export default function LoginPage() {
                     type="email" 
                     required
                     placeholder="name@example.com" 
-                    className="w-full bg-black/50 border border-border/50 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-white placeholder:text-foreground/30"
+                    className="w-full bg-card border border-border/50 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-foreground placeholder:text-foreground/30"
                   />
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function LoginPage() {
                     type="password" 
                     required
                     placeholder="••••••••" 
-                    className="w-full bg-black/50 border border-border/50 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-white placeholder:text-foreground/30"
+                    className="w-full bg-card border border-border/50 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-foreground placeholder:text-foreground/30"
                   />
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function LoginPage() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-4">
-              <button type="button" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-border/50 rounded-xl py-2.5 transition-colors text-sm font-medium">
+              <button type="button" className="flex items-center justify-center gap-2 bg-card hover:bg-white/10 border border-border/50 rounded-xl py-2.5 transition-colors text-sm font-medium">
                 <svg className="w-4 h-4" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
                   <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
@@ -142,8 +142,8 @@ export default function LoginPage() {
                 </svg>
                 Google
               </button>
-              <button type="button" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-border/50 rounded-xl py-2.5 transition-colors text-sm font-medium">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <button type="button" className="flex items-center justify-center gap-2 bg-card hover:bg-white/10 border border-border/50 rounded-xl py-2.5 transition-colors text-sm font-medium">
+                <svg className="w-4 h-4 text-foreground" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
                 </svg>
                 Facebook

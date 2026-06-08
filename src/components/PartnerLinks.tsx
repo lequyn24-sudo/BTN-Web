@@ -71,7 +71,7 @@ export function PartnerLinks() {
               </div>
               
               <div className="flex flex-col z-10">
-                <h3 className="font-bold text-white text-base mb-1 group-hover:text-primary transition-colors">
+                <h3 className="font-bold text-foreground text-base mb-1 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-[11px] text-foreground/60 mb-3 leading-snug pr-2">

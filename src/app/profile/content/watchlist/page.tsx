@@ -14,7 +14,7 @@ export default function WatchlistPage() {
     <div className="flex flex-col gap-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-white mb-2">Watchlist</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-2">Watchlist</h1>
           <p className="text-foreground/60 text-sm">Track your favorite cryptocurrencies in real-time.</p>
         </div>
         <button className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors w-fit">
@@ -30,23 +30,23 @@ export default function WatchlistPage() {
           <input 
             type="text" 
             placeholder="Search watchlist..."
-            className="w-full bg-black/50 border border-border/50 rounded-lg pl-10 pr-4 py-2 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors"
+            className="w-full bg-card border border-border/50 rounded-lg pl-10 pr-4 py-2 text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors"
           />
           <Search className="w-4 h-4 text-foreground/50 absolute left-3.5 top-1/2 -translate-y-1/2" />
         </div>
         <div className="flex items-center gap-3 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
           <button className="px-3 py-1.5 bg-primary/20 text-primary border border-primary/30 rounded-full text-xs font-medium whitespace-nowrap">All Coins</button>
-          <button className="px-3 py-1.5 bg-white/5 border border-border/50 text-foreground/70 hover:text-white rounded-full text-xs font-medium whitespace-nowrap transition-colors">Top Gainers</button>
-          <button className="px-3 py-1.5 bg-white/5 border border-border/50 text-foreground/70 hover:text-white rounded-full text-xs font-medium whitespace-nowrap transition-colors">DeFi</button>
+          <button className="px-3 py-1.5 bg-card border border-border/50 text-foreground/70 hover:text-foreground rounded-full text-xs font-medium whitespace-nowrap transition-colors">Top Gainers</button>
+          <button className="px-3 py-1.5 bg-card border border-border/50 text-foreground/70 hover:text-foreground rounded-full text-xs font-medium whitespace-nowrap transition-colors">DeFi</button>
         </div>
       </div>
 
       {/* Watchlist Table */}
-      <div className="bg-black/20 rounded-xl border border-border/50 flex flex-col overflow-hidden">
+      <div className="bg-card rounded-xl border border-border/50 flex flex-col overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[700px]">
             <thead>
-              <tr className="bg-white/5 border-b border-border/50">
+              <tr className="bg-card border-b border-border/50">
                 <th className="py-3 px-6 text-xs font-medium text-foreground/60 uppercase tracking-wider w-10"></th>
                 <th className="py-3 px-6 text-xs font-medium text-foreground/60 uppercase tracking-wider">Asset</th>
                 <th className="py-3 px-6 text-xs font-medium text-foreground/60 uppercase tracking-wider text-right">Price</th>
@@ -58,7 +58,7 @@ export default function WatchlistPage() {
             </thead>
             <tbody className="divide-y divide-border/50 text-sm">
               {watchlist.map((coin, idx) => (
-                <tr key={coin.id} className="hover:bg-white/5 transition-colors group cursor-pointer">
+                <tr key={coin.id} className="hover:bg-card transition-colors group cursor-pointer">
                   <td className="py-4 px-6 text-center">
                     <Star className="w-4 h-4 fill-primary text-primary cursor-pointer hover:scale-110 transition-transform" />
                   </td>
@@ -68,12 +68,12 @@ export default function WatchlistPage() {
                         {coin.symbol[0]}
                       </div>
                       <div className="flex flex-col">
-                        <span className="font-bold text-white group-hover:text-primary transition-colors">{coin.name}</span>
+                        <span className="font-bold text-foreground group-hover:text-primary transition-colors">{coin.name}</span>
                         <span className="text-xs text-foreground/50 font-mono">{coin.symbol}</span>
                       </div>
                     </div>
                   </td>
-                  <td className="py-4 px-6 text-right font-mono text-white font-medium">
+                  <td className="py-4 px-6 text-right font-mono text-foreground font-medium">
                     {coin.price}
                   </td>
                   <td className="py-4 px-6 text-right">
@@ -89,7 +89,7 @@ export default function WatchlistPage() {
                     {coin.volume}
                   </td>
                   <td className="py-4 px-6 text-center">
-                    <button className="p-1 rounded hover:bg-white/10 text-foreground/50 hover:text-white transition-colors opacity-0 group-hover:opacity-100">
+                    <button className="p-1 rounded hover:bg-white/10 text-foreground/50 hover:text-foreground transition-colors opacity-0 group-hover:opacity-100">
                       <MoreHorizontal className="w-5 h-5" />
                     </button>
                   </td>

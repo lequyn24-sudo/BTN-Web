@@ -73,7 +73,7 @@ export default function ProfileLayout({
                     <User className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-white text-lg leading-tight">Crypto Whale</h2>
+                    <h2 className="font-bold text-foreground text-lg leading-tight">Crypto Whale</h2>
                     <p className="text-xs text-foreground/50">Pro Member</p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function ProfileLayout({
                                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                                   isActive 
                                     ? "bg-primary/10 text-primary border border-primary/20 shadow-[0_0_10px_rgba(255,107,0,0.1)]" 
-                                    : "text-foreground/70 hover:bg-white/5 hover:text-white border border-transparent"
+                                    : "text-foreground/70 hover:bg-card hover:text-foreground border border-transparent"
                                 }`}
                               >
                                 <item.icon className={`w-4 h-4 ${isActive ? "text-primary" : "text-foreground/50"}`} />
