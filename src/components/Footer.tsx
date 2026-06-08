@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Globe, Mail, Send, MessageCircle } from "lucide-react";
 
 export function Footer() {
@@ -19,13 +20,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center font-display font-bold text-primary-foreground">
-                B
+            <Link href="/" className="flex items-center mb-6">
+              <div className="relative w-[180px] h-[40px]">
+                <Image 
+                  src="https://bitcoininfonews.com/wp-content/uploads/2024/12/logo.png" 
+                  alt="Bitcoin Info News Logo" 
+                  fill 
+                  className="object-contain" 
+                />
               </div>
-              <span className="font-display font-bold text-xl tracking-tight">
-                BitcoinInfo<span className="text-primary">News</span>
-              </span>
             </Link>
             <p className="text-foreground/70 mb-6 text-sm leading-relaxed max-w-sm">
               Your trusted source for Bitcoin, blockchain, and cryptocurrency news, insights, and market analysis.

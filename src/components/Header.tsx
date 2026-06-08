@@ -28,13 +28,15 @@ export function Header() {
     <header className="relative z-50 w-full glass border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-8 h-8 rounded-full overflow-hidden group-hover:shadow-[0_0_15px_rgba(255,107,0,0.6)] transition-all flex-shrink-0 bg-white">
-              <Image src="https://bitcoininfonews.com/wp-content/uploads/2024/12/logo.png" alt="BTN Logo" fill className="object-contain" />
+          <Link href="/" className="flex items-center group">
+            <div className="relative w-[180px] h-[40px] flex-shrink-0">
+              <Image 
+                src="https://bitcoininfonews.com/wp-content/uploads/2024/12/logo.png" 
+                alt="Bitcoin Info News Logo" 
+                fill 
+                className="object-contain" 
+              />
             </div>
-            <span className="font-bold text-xl tracking-tight hidden sm:inline-block text-white">
-              BitcoinInfo<span className="text-primary">News</span>
-            </span>
           </Link>
         </div>
 
