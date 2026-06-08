@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Search, Menu } from "lucide-react";
+import { Search, Menu, User } from "lucide-react";
+import { useState } from "react";
 
 export function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const navLinks = [
     "Bitcoin News",
     "Alt Coin News",
@@ -48,13 +51,23 @@ export function Header() {
           <button className="p-2 lg:hidden hover:text-primary transition-colors text-white" aria-label="Menu">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="flex items-center gap-3">
-            <button className="hidden sm:flex btn-secondary">
-              Projects
+          <div className="flex items-center gap-4">
+            {isLoggedIn ? (
+              <Link href="/profile" className="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-border/50 hover:border-primary/50 transition-colors shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+                <User className="w-5 h-5 text-primary" />
+              </Link>
+            ) : (
+              <button onClick={() => setIsLoggedIn(true)} className="hidden sm:flex text-sm font-medium text-white hover:text-primary transition-colors whitespace-nowrap">
+                Sign In
+              </button>
+            )}
+            
+            <button className="hidden lg:flex btn-secondary whitespace-nowrap">
+              Sponsorship
             </button>
-            <button className="hidden sm:flex btn-primary">
+            <Link href="/subscribe" className="hidden sm:flex btn-primary whitespace-nowrap">
               Subscribe
-            </button>
+            </Link>
           </div>
         </div>
       </div>
