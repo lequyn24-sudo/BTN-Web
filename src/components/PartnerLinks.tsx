@@ -60,9 +60,8 @@ export function PartnerLinks() {
                     src={item.bgImage} 
                     alt="" 
                     fill 
-                    className="object-cover opacity-30 group-hover:scale-105 transition-transform duration-700 group-hover:opacity-40" 
+                    className="object-cover opacity-30 group-hover:scale-110 transition-transform duration-700 group-hover:opacity-40 blur-md scale-105" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
                 </div>
               )}
               
