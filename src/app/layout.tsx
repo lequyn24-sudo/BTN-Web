@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Exo_2, Orbitron } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
-const exo2 = Exo_2({
-  variable: "--font-exo2",
-  subsets: ["latin"],
-});
-
-const orbitron = Orbitron({
-  variable: "--font-orbitron",
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -27,17 +21,10 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${exo2.variable} ${orbitron.variable} h-full antialiased`}
+      className={`dark ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans transition-colors duration-300">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body className="min-h-full flex flex-col font-sans bg-black text-foreground">
+        {children}
       </body>
     </html>
   );
