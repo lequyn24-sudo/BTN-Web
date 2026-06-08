@@ -25,7 +25,7 @@ export function Header() {
   ];
 
   return (
-    <header className="relative z-50 w-full glass border-b border-border">
+    <header className="dark relative z-50 w-full glass border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center group">

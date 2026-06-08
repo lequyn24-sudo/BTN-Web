@@ -7,10 +7,10 @@
   --primary-foreground: #ffffff;
   --card: rgba(255, 255, 255, 0.8);
   --border: rgba(15, 23, 42, 0.1);
-  --btn-primary-bg: linear-gradient(180deg, #e35a00 0%, #4a1100 100%);
-  --btn-primary-inset: rgba(0, 0, 0, 0.4);
-  --btn-primary-ring: #9c3c00;
-  --btn-primary-glow: rgba(255, 80, 0, 0.2);
+  --btn-primary-bg: linear-gradient(180deg, #FF8C33 0%, #E65C00 100%);
+  --btn-primary-inset: rgba(200, 50, 0, 0.4);
+  --btn-primary-ring: #FFA05A;
+  --btn-primary-glow: rgba(255, 107, 0, 0.2);
   --btn-secondary-bg: linear-gradient(180deg, #2a2a2a 0%, #000000 100%);
   --btn-secondary-text: #f0f0f0;
   --btn-secondary-inset: rgba(0, 0, 0, 0.4);

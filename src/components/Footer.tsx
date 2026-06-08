@@ -16,7 +16,7 @@ export function Footer() {
   const resources = ["Terms of Service", "Privacy Policy", "Disclaimer", "Sitemap"];
 
   return (
-    <footer className="bg-background/95 border-t border-border pt-16 pb-8 mt-20">
+    <footer className="dark bg-background/95 border-t border-border pt-16 pb-8 mt-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8">
           
