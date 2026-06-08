@@ -78,18 +78,18 @@ export function Sidebar() {
       </div>
 
       {/* Advertise With Us */}
-      <Link href="/contact" className="skeuo-card rounded-[24px] p-6 relative overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform flex-1 flex flex-col justify-center">
-        <div className="absolute -right-12 -bottom-12 w-40 h-40 bg-yellow-500/10 blur-3xl rounded-full z-0"></div>
+      <Link href="/contact" className="dark bg-[#0a0a0a] border border-white/10 rounded-[24px] p-6 relative overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform flex-1 flex flex-col justify-center shadow-xl">
+        <div className="absolute -right-12 -bottom-12 w-40 h-40 bg-yellow-500/20 blur-3xl rounded-full z-0 pointer-events-none"></div>
         <div className="flex items-center gap-4 relative z-10">
           <div className="flex-1">
-            <h3 className="font-bold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">Advertise With Us</h3>
+            <h3 className="font-bold text-lg mb-2 text-white group-hover:text-primary transition-colors">Advertise With Us</h3>
             <p className="text-[13px] text-foreground/60 mb-4 leading-relaxed">Reach the world's most engaged crypto audience.</p>
             <div className="text-[12px] text-primary font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
               Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </div>
           </div>
           <div 
-            className="w-[100px] h-[100px] relative shrink-0 -mr-4 group-hover:scale-110 transition-transform duration-500"
+            className="w-[100px] h-[100px] relative shrink-0 -mr-4 group-hover:scale-110 transition-transform duration-500 mix-blend-screen"
             style={{ 
               WebkitMaskImage: 'radial-gradient(circle at center, black 50%, transparent 75%)', 
               maskImage: 'radial-gradient(circle at center, black 50%, transparent 75%)' 
@@ -99,7 +99,7 @@ export function Sidebar() {
               src="/mockups/3d_megaphone.png" 
               alt="Megaphone" 
               fill 
-              className="object-contain mix-blend-screen contrast-[1.3] brightness-[0.8]"
+              className="object-contain contrast-[1.3] brightness-[0.8]"
             />
           </div>
         </div>

@@ -66,10 +66,10 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
           <div className="relative w-32 flex flex-col items-center mt-2">
             {/* SVG Gauge */}
             <svg viewBox="0 0 100 55" className="w-full overflow-visible">
-              <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#222" strokeWidth="10" strokeLinecap="round" />
-              <path d="M 10 50 A 40 40 0 0 1 35 18" fill="none" stroke="#ef4444" strokeWidth="10" strokeLinecap="round" />
-              <path d="M 35 18 A 40 40 0 0 1 65 18" fill="none" stroke="#eab308" strokeWidth="10" />
-              <path d="M 65 18 A 40 40 0 0 1 90 50" fill="none" stroke="#22c55e" strokeWidth="10" strokeLinecap="round" />
+              {/* Colored Segments */}
+              <path d="M 10 50 A 40 40 0 0 1 30 15.36" fill="none" stroke="#ef4444" strokeWidth="10" strokeLinecap="round" />
+              <path d="M 30 15.36 A 40 40 0 0 1 70 15.36" fill="none" stroke="#eab308" strokeWidth="10" />
+              <path d="M 70 15.36 A 40 40 0 0 1 90 50" fill="none" stroke="#22c55e" strokeWidth="10" strokeLinecap="round" />
               
               {/* Pointer */}
               <g transform={`rotate(${pointerRotation}, 50, 50)`}>
