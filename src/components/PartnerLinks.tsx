@@ -38,7 +38,6 @@ const linksData = [
     icon: Bitcoin,
     iconColor: "text-yellow-400",
     iconBg: "bg-yellow-400/20",
-    bgImage: "/mockups/20260522-175919_1779444420kVIOzuBKeB-768x403.jpg",
   }
 ];
 
