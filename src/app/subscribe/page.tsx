@@ -44,7 +44,31 @@ export default function SubscribePage() {
           </div>
 
           {/* Right Form */}
-          <div className="skeuo-card p-8 md:p-12 rounded-[32px] relative">
+          <div className="skeuo-card p-8 md:p-12 rounded-[32px] relative group">
+            
+            {/* Spotlight Hover Effect */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] pointer-events-none z-20 flex justify-center">
+              {/* Light Beam */}
+              <div 
+                className="absolute top-0 w-full h-0 group-hover:h-[350px] bg-gradient-to-b from-[#ff6b00]/60 via-[#ff6b00]/15 to-transparent blur-[25px] opacity-0 group-hover:opacity-100 transition-all duration-[1200ms] ease-out mix-blend-screen origin-top" 
+                style={{ 
+                  clipPath: 'polygon(40% 0, 60% 0, 100% 100%, 0 100%)',
+                }}
+              ></div>
+
+              {/* Glowing Edge on Card Top */}
+              <div className="absolute top-0 w-[200px] h-[2px] bg-gradient-to-r from-transparent via-[#ff6b00] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 shadow-[0_0_20px_5px_rgba(255,107,0,0.8)]"></div>
+
+              {/* Emitter Icon */}
+              <div className="absolute -top-5 w-10 h-10 rounded-full bg-[#050505] border-[3px] border-white/90 shadow-[0_0_40px_15px_rgba(255,107,0,0.7)] flex items-center justify-center opacity-0 group-hover:opacity-100 transform -translate-y-8 group-hover:translate-y-0 transition-all duration-700 ease-out">
+                {/* Custom Icon resembling the reference */}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L22 20H2L12 2Z" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="14" r="3" fill="black" />
+                </svg>
+              </div>
+            </div>
+
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded-[32px] pointer-events-none"></div>
             
             <form className="relative z-10 flex flex-col gap-6">
