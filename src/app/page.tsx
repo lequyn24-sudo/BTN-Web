@@ -22,7 +22,7 @@ export default function Home() {
           </div>
           
           {/* Sidebar Area */}
-          <div className="flex flex-col gap-6 sticky top-24">
+          <div className="h-full">
             <Sidebar />
           </div>
         </div>
