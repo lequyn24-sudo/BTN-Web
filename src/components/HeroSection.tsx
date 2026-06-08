@@ -2,13 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { categoriesData } from "@/data/mockData";
+import { MarketWidget } from "./MarketWidget";
+import { fetchMarketData } from "@/services/api";
 
-export function HeroSection() {
+export async function HeroSection() {
   const featuredArticle = categoriesData[0].articles[0];
+  const marketData = await fetchMarketData();
 
   return (
-    <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <Link href={`/article/${featuredArticle.slug}`} className="lg:col-span-2 relative rounded-2xl overflow-hidden glass group cursor-pointer h-[400px] md:h-[500px] block">
+    <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+      <Link href={`/article/${featuredArticle.slug}`} className="lg:col-span-2 relative rounded-2xl overflow-hidden glass group cursor-pointer h-full min-h-[450px] block">
         <Image 
           src={featuredArticle.img} 
           alt={featuredArticle.title} 
@@ -42,35 +45,7 @@ export function HeroSection() {
       </Link>
 
       <div className="flex flex-col gap-6">
-        <div className="glass rounded-2xl p-6 h-full flex flex-col justify-between">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="font-semibold text-lg uppercase tracking-wide">Market Mood</h3>
-          </div>
-          <div className="flex flex-col items-center justify-center flex-1">
-            <div className="relative w-40 h-20 overflow-hidden mb-4">
-              <div className="absolute top-0 left-0 w-full h-[200%] rounded-full border-[15px] border-border border-t-primary border-r-primary rotate-45 transition-transform duration-1000 shadow-[0_0_15px_rgba(255,107,0,0.4)]"></div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
-                <span className="text-4xl font-bold text-primary drop-shadow-[0_0_8px_rgba(255,107,0,0.8)]">71</span>
-                <span className="text-xs uppercase tracking-widest text-foreground/60">Greed</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="space-y-4 text-sm mt-4">
-            <div className="flex justify-between border-b border-border pb-2">
-              <span className="text-foreground/60">BTC PRICE</span>
-              <span className="font-semibold text-green-500">$70,245.30 <span className="text-xs ml-1">+2.68%</span></span>
-            </div>
-            <div className="flex justify-between border-b border-border pb-2">
-              <span className="text-foreground/60">Market Cap</span>
-              <span className="font-semibold text-white">$1.38T</span>
-            </div>
-            <div className="flex justify-between border-b border-border pb-2">
-              <span className="text-foreground/60">24h Volume</span>
-              <span className="font-semibold text-white">$34.62B</span>
-            </div>
-          </div>
-        </div>
+        <MarketWidget initialData={marketData} />
       </div>
     </section>
   );

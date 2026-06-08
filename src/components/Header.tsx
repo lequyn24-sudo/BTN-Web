@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Search, Menu } from "lucide-react";
 
 export function Header() {
@@ -19,8 +20,8 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center font-bold bg-primary text-primary-foreground group-hover:shadow-[0_0_15px_rgba(255,107,0,0.6)] transition-all">
-              B
+            <div className="relative w-8 h-8 rounded-full overflow-hidden group-hover:shadow-[0_0_15px_rgba(255,107,0,0.6)] transition-all flex-shrink-0">
+              <Image src="https://bitcoininfonews.com/wp-content/uploads/2024/04/logo-btn-1.png" alt="BTN Logo" fill className="object-cover" />
             </div>
             <span className="font-bold text-xl tracking-tight hidden sm:inline-block text-white">
               BitcoinInfo<span className="text-primary">News</span>
