@@ -17,7 +17,7 @@ export function Sidebar() {
         <h3 className="font-bold text-lg uppercase tracking-wide mb-4">Trending Tags</h3>
         <div className="flex flex-wrap gap-2">
           {trendingTags.map((tag) => (
-            <Link key={tag} href="#" className="text-xs bg-foreground/5 hover:bg-primary/20 hover:text-primary transition-colors border border-border px-3 py-1.5 rounded-full">
+            <Link key={tag} href="/category/bitcoin-news" className="text-xs bg-foreground/5 hover:bg-primary/20 hover:text-primary transition-colors border border-border px-3 py-1.5 rounded-full">
               {tag}
             </Link>
           ))}

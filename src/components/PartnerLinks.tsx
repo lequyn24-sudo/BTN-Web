@@ -6,39 +6,39 @@ const linksData = [
   {
     title: "cmc",
     desc: "Live data, rankings, and insights powered by CoinMarketCap.",
-    linkText: "Explore CMC",
+    linkText: "EXPLORE CMC",
+    url: "/category/cmc",
     icon: Activity,
     iconColor: "text-blue-500",
     iconBg: "bg-blue-500/20",
-    url: "#"
   },
   {
     title: "Press Release",
     desc: "Official announcements from leading blockchain projects.",
-    linkText: "View All",
+    linkText: "VIEW ALL",
+    url: "/category/press-release",
     icon: ScrollText,
     iconColor: "text-amber-100",
     iconBg: "bg-white/10",
-    url: "#"
   },
   {
     title: "Sponsored Articles",
     desc: "In-depth stories and insights from our trusted partners.",
-    linkText: "Explore",
+    linkText: "EXPLORE",
+    url: "/category/sponsored-articles",
     icon: Gem,
     iconColor: "text-yellow-500",
     iconBg: "bg-yellow-500/20",
-    url: "#"
   },
   {
     title: "Millionaire",
     desc: "Strategies, habits, and stories from crypto millionaires.",
-    linkText: "Read More",
+    linkText: "READ MORE",
+    url: "/category/millionaire",
     icon: Bitcoin,
     iconColor: "text-yellow-400",
     iconBg: "bg-yellow-400/20",
-    bgImage: "/mockups/20260522-175919_1779444420kVIOzuBKeB-768x403.jpg", // Using as airplane bg
-    url: "#"
+    bgImage: "/mockups/20260522-175919_1779444420kVIOzuBKeB-768x403.jpg",
   }
 ];
 

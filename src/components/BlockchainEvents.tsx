@@ -11,7 +11,7 @@ export function BlockchainEvents() {
           Blockchain Event
           <span className="absolute -bottom-[18px] left-0 w-12 h-1 bg-primary rounded-full shadow-[0_0_10px_rgba(255,107,0,0.8)]"></span>
         </h2>
-        <Link href="#" className="flex items-center gap-2 text-primary hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider shrink-0">
+        <Link href="/category/blockchain-event" className="flex items-center gap-2 text-primary hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider shrink-0">
           View All <ArrowRight size={16} />
         </Link>
       </div>

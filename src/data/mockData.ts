@@ -38,6 +38,9 @@ export const categoriesData = [
   { title: "Top Project", slug: "top-project", articles: generateArticles("Top Project", 10) },
   { title: "Other", slug: "other", articles: generateArticles("Other", 10) },
   { title: "Sponsored Articles", slug: "sponsored-articles", articles: generateArticles("Sponsored Articles", 10) },
+  { title: "cmc", slug: "cmc", articles: generateArticles("cmc", 10) },
+  { title: "Press Release", slug: "press-release", articles: generateArticles("Press Release", 10) },
+  { title: "Millionaire", slug: "millionaire", articles: generateArticles("Millionaire", 10) },
 ];
 
 export const getArticleBySlug = (slug: string) => {
@@ -56,7 +59,7 @@ export const eventsList = [
     month: "JUN",
     description: "The biggest Web3 event of the year returns.",
     img: "/mockups/1280X1280_1779175249LXbBvv3v8j-768x432.png",
-    link: "#"
+    link: "/category/blockchain-event"
   },
   {
     title: "ETHGlobal Prague",
@@ -65,7 +68,7 @@ export const eventsList = [
     month: "MAY",
     description: "Building the future of Ethereum together.",
     img: "/mockups/kraken-us-compliant-bitcoin-perpetual-contracts-launch-30-days-thumbnail-768x512.jpg",
-    link: "#"
+    link: "/category/blockchain-event"
   },
   {
     title: "Bitcoin 2024",
@@ -74,7 +77,7 @@ export const eventsList = [
     month: "JUN",
     description: "The world's largest Bitcoin conference.",
     img: "/mockups/sui-mainnet-suffers-multiple-disruptions-thumbnail-1-768x512.jpg",
-    link: "#"
+    link: "/category/blockchain-event"
   },
   {
     title: "Token2049 Dubai",
@@ -83,6 +86,6 @@ export const eventsList = [
     month: "JUN",
     description: "Where the global crypto industry connects.",
     img: "/mockups/vaneck-debuts-us-spot-bnb-etf-thumbnail-768x512.jpg",
-    link: "#"
+    link: "/category/blockchain-event"
   }
 ];
