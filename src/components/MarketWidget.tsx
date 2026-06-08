@@ -74,9 +74,9 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
               {/* Pointer */}
               <g transform={`rotate(${pointerRotation}, 50, 50)`}>
                 {/* Pointer pointing to 0 (left) by default */}
-                <polygon points="50,47 50,53 15,50" fill="#fff" className="drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
+                <polygon points="50,47 50,53 15,50" fill="currentColor" className="text-foreground drop-shadow-md" />
               </g>
-              <circle cx="50" cy="50" r="4" fill="#fff" />
+              <circle cx="50" cy="50" r="4" fill="currentColor" className="text-foreground" />
             </svg>
             
             {/* Text Below Gauge */}

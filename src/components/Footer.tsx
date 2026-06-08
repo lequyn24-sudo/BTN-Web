@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Globe, Mail, Send, MessageCircle } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Footer() {
   const categories = [
@@ -120,7 +121,8 @@ export function Footer() {
           <p className="text-sm text-foreground/60">
             © 2024 BitcoinInfoNews.com. All Rights Reserved.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
+            <ThemeToggle />
             <select className="bg-transparent border border-border rounded-md px-2 py-1 text-sm outline-none focus:border-primary">
               <option value="en">English</option>
               <option value="vi">Tiếng Việt</option>

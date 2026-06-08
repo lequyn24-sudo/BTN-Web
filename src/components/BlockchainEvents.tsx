@@ -30,8 +30,8 @@ export function BlockchainEvents() {
               
               {/* Date Badge */}
               <div className="absolute top-2 left-2 bg-[#0a0a0a] border border-[#333] rounded-lg px-3 py-2 flex flex-col items-center justify-center shadow-lg min-w-[50px]">
-                <span className="text-[10px] font-bold text-foreground/70 uppercase tracking-widest leading-none mb-1">{event.month}</span>
-                <span className="text-sm font-bold text-foreground leading-none">{event.date}</span>
+                <span className="text-[10px] font-bold text-white/70 uppercase tracking-widest leading-none mb-1">{event.month}</span>
+                <span className="text-sm font-bold text-white leading-none">{event.date}</span>
               </div>
             </div>
             

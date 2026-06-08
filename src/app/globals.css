@@ -7,6 +7,16 @@
   --primary-foreground: #ffffff;
   --card: rgba(255, 255, 255, 0.8);
   --border: rgba(15, 23, 42, 0.1);
+  --btn-primary-bg: linear-gradient(180deg, #e35a00 0%, #4a1100 100%);
+  --btn-primary-inset: rgba(0, 0, 0, 0.4);
+  --btn-primary-ring: #9c3c00;
+  --btn-primary-glow: rgba(255, 80, 0, 0.2);
+  --btn-secondary-bg: linear-gradient(180deg, #2a2a2a 0%, #000000 100%);
+  --btn-secondary-text: #f0f0f0;
+  --btn-secondary-inset: rgba(0, 0, 0, 0.4);
+  --btn-secondary-ring: #555555;
+  --btn-secondary-glow: transparent;
+  --btn-shadow: rgba(0, 0, 0, 0.15);
 }
 
 .dark {
@@ -16,6 +26,16 @@
   --primary-foreground: #ffffff;
   --card: rgba(15, 15, 15, 0.6);
   --border: rgba(255, 107, 0, 0.2);
+  --btn-primary-bg: linear-gradient(180deg, #e35a00 0%, #4a1100 100%);
+  --btn-primary-inset: rgba(0, 0, 0, 1);
+  --btn-primary-ring: #9c3c00;
+  --btn-primary-glow: rgba(255, 80, 0, 0.4);
+  --btn-secondary-bg: linear-gradient(180deg, #2a2a2a 0%, #000000 100%);
+  --btn-secondary-text: #f0f0f0;
+  --btn-secondary-inset: rgba(0, 0, 0, 1);
+  --btn-secondary-ring: #555555;
+  --btn-secondary-glow: transparent;
+  --btn-shadow: rgba(0, 0, 0, 0.6);
 }
 
 @theme inline {
@@ -99,22 +119,22 @@
   }
 
   .btn-primary {
-    background: linear-gradient(180deg, #e35a00 0%, #4a1100 100%);
+    background: var(--btn-primary-bg);
     color: #fff;
     border-radius: 9999px;
     padding: 10px 28px;
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.5px;
-    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 
-      inset 0 1px 0px rgba(255, 255, 255, 0.9),
+      inset 0 1px 0px rgba(255, 255, 255, 0.5),
       inset 0 8px 15px rgba(255, 255, 255, 0.2),
-      inset 0 -8px 12px rgba(0, 0, 0, 1),
-      0 0 0 2px #0f0f0f,
-      0 0 0 4px #9c3c00,
-      0 0 20px rgba(255, 80, 0, 0.4),
-      0 5px 15px rgba(0, 0, 0, 0.6);
+      inset 0 -8px 12px var(--btn-primary-inset),
+      0 0 0 2px var(--background),
+      0 0 0 4px var(--btn-primary-ring),
+      0 0 20px var(--btn-primary-glow),
+      0 5px 15px var(--btn-shadow);
     border: none;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -125,21 +145,21 @@
   }
 
   .btn-secondary {
-    background: linear-gradient(180deg, #2a2a2a 0%, #000000 100%);
-    color: #f0f0f0;
+    background: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
     border-radius: 9999px;
     padding: 10px 28px;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.5px;
-    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: none;
     box-shadow: 
       inset 0 1px 0px rgba(255, 255, 255, 0.6),
       inset 0 6px 12px rgba(255, 255, 255, 0.05),
-      inset 0 -8px 12px rgba(0, 0, 0, 1),
-      0 0 0 2px #0f0f0f,
-      0 0 0 3px #555555,
-      0 5px 15px rgba(0, 0, 0, 0.6);
+      inset 0 -8px 12px var(--btn-secondary-inset),
+      0 0 0 2px var(--background),
+      0 0 0 3px var(--btn-secondary-ring),
+      0 5px 15px var(--btn-shadow);
     border: none;
     transition: all 0.2s ease;
     cursor: pointer;

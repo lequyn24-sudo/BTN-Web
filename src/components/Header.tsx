@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Search, Menu, User } from "lucide-react";
 import { useState, useEffect } from "react";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -54,7 +53,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <ThemeToggle />
           <button className="p-2 hover:text-primary transition-colors text-foreground" aria-label="Search">
             <Search className="w-5 h-5" />
           </button>
