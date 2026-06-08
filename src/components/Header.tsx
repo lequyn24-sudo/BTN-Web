@@ -3,10 +3,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Search, Menu, User } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Only run on client to avoid hydration mismatch
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+    setIsLoggedIn(loggedIn);
+  }, []);
 
   const navLinks = [
     "Bitcoin News",
@@ -57,9 +63,9 @@ export function Header() {
                 <User className="w-5 h-5 text-primary" />
               </Link>
             ) : (
-              <button onClick={() => setIsLoggedIn(true)} className="hidden sm:flex text-sm font-medium text-white hover:text-primary transition-colors whitespace-nowrap">
+              <Link href="/login" className="hidden sm:flex text-sm font-medium text-white hover:text-primary transition-colors whitespace-nowrap">
                 Sign In
-              </button>
+              </Link>
             )}
             
             <button className="hidden lg:flex btn-secondary whitespace-nowrap">

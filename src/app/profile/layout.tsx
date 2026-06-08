@@ -110,7 +110,13 @@ export default function ProfileLayout({
                 </nav>
 
                 <div className="mt-8 pt-6 border-t border-border/50">
-                  <button className="w-full py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors border border-transparent hover:border-red-500/20">
+                  <button 
+                    onClick={() => {
+                      localStorage.removeItem("isLoggedIn");
+                      window.location.href = "/";
+                    }}
+                    className="w-full py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors border border-transparent hover:border-red-500/20"
+                  >
                     Sign Out
                   </button>
                 </div>
