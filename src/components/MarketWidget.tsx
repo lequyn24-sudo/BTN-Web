@@ -19,25 +19,25 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
     fearAndGreed: 71,
     fearAndGreedLabel: "Greed",
     topGainers: [
-      { id: "1", name: "Bitcoin", symbol: "BTC", price: "$70,245.30", change: "2.68%", isUp: true },
-      { id: "2", name: "Ethereum", symbol: "ETH", price: "$3,765.12", change: "4.21%", isUp: true },
-      { id: "3", name: "Solana", symbol: "SOL", price: "$167.54", change: "6.72%", isUp: true },
-      { id: "4", name: "BNB", symbol: "BNB", price: "$615.43", change: "2.31%", isUp: true },
-      { id: "5", name: "Dogecoin", symbol: "DOGE", price: "$0.1652", change: "5.11%", isUp: true },
+      { id: "1", name: "Bitcoin", symbol: "BTC", price: "$70,245.30", change: "2.68%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png" },
+      { id: "2", name: "Ethereum", symbol: "ETH", price: "$3,765.12", change: "4.21%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png" },
+      { id: "3", name: "Solana", symbol: "SOL", price: "$167.54", change: "6.72%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/4128/large/solana.png" },
+      { id: "4", name: "BNB", symbol: "BNB", price: "$615.43", change: "2.31%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/825/large/bnb-icon2_2x.png" },
+      { id: "5", name: "Dogecoin", symbol: "DOGE", price: "$0.1652", change: "5.11%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/5/large/dogecoin.png" },
     ],
     topLosers: [
-      { id: "1", name: "XRP", symbol: "XRP", price: "$0.524", change: "1.24%", isUp: false },
-      { id: "2", name: "Cardano", symbol: "ADA", price: "$0.45", change: "2.10%", isUp: false },
-      { id: "3", name: "Polkadot", symbol: "DOT", price: "$7.12", change: "0.85%", isUp: false },
-      { id: "4", name: "Chainlink", symbol: "LINK", price: "$14.20", change: "3.40%", isUp: false },
-      { id: "5", name: "Avalanche", symbol: "AVAX", price: "$35.60", change: "1.50%", isUp: false },
+      { id: "1", name: "XRP", symbol: "XRP", price: "$0.524", change: "1.24%", isUp: false, image: "https://coin-images.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png" },
+      { id: "2", name: "Cardano", symbol: "ADA", price: "$0.45", change: "2.10%", isUp: false, image: "https://coin-images.coingecko.com/coins/images/975/large/cardano.png" },
+      { id: "3", name: "Polkadot", symbol: "DOT", price: "$7.12", change: "0.85%", isUp: false, image: "https://coin-images.coingecko.com/coins/images/12171/large/polkadot.png" },
+      { id: "4", name: "Chainlink", symbol: "LINK", price: "$14.20", change: "3.40%", isUp: false, image: "https://coin-images.coingecko.com/coins/images/877/large/chainlink-new-logo.png" },
+      { id: "5", name: "Avalanche", symbol: "AVAX", price: "$35.60", change: "1.50%", isUp: false, image: "https://coin-images.coingecko.com/coins/images/12559/large/Avalanche_Circle_RedWhite_Trans.png" },
     ],
     mostViewed: [
-      { id: "1", name: "Bitcoin", symbol: "BTC", price: "$70,245.30", change: "2.68%", isUp: true },
-      { id: "2", name: "Pepe", symbol: "PEPE", price: "$0.0000105", change: "15.2%", isUp: true },
-      { id: "3", name: "Solana", symbol: "SOL", price: "$167.54", change: "6.72%", isUp: true },
-      { id: "4", name: "Shiba Inu", symbol: "SHIB", price: "$0.000025", change: "0.5%", isUp: false },
-      { id: "5", name: "Ethereum", symbol: "ETH", price: "$3,765.12", change: "4.21%", isUp: true },
+      { id: "1", name: "Bitcoin", symbol: "BTC", price: "$70,245.30", change: "2.68%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png" },
+      { id: "2", name: "Pepe", symbol: "PEPE", price: "$0.0000105", change: "15.2%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/29850/large/pepe-token.jpeg" },
+      { id: "3", name: "Solana", symbol: "SOL", price: "$167.54", change: "6.72%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/4128/large/solana.png" },
+      { id: "4", name: "Shiba Inu", symbol: "SHIB", price: "$0.000025", change: "0.5%", isUp: false, image: "https://coin-images.coingecko.com/coins/images/11939/large/shiba.png" },
+      { id: "5", name: "Ethereum", symbol: "ETH", price: "$3,765.12", change: "4.21%", isUp: true, image: "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png" },
     ]
   };
 
@@ -63,24 +63,30 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
         {/* Left: Market Mood */}
         <div className="flex flex-col items-center">
           <span className="text-[10px] text-foreground/50 uppercase tracking-wider mb-2 self-start font-medium">Market Mood</span>
-          <div className="relative w-32 h-16 overflow-hidden mt-2">
+          <div className="relative w-32 h-20 overflow-hidden mt-2 flex flex-col items-center">
             {/* SVG Gauge */}
-            <svg viewBox="0 0 100 50" className="w-full h-full overflow-visible">
-              <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#222" strokeWidth="8" strokeLinecap="round" />
-              <path d="M 10 50 A 40 40 0 0 1 40 15" fill="none" stroke="#ef4444" strokeWidth="8" strokeLinecap="round" />
-              <path d="M 40 15 A 40 40 0 0 1 70 15" fill="none" stroke="#eab308" strokeWidth="8" />
-              <path d="M 70 15 A 40 40 0 0 1 90 50" fill="none" stroke="#22c55e" strokeWidth="8" strokeLinecap="round" />
+            <svg viewBox="0 0 100 60" className="w-full h-full overflow-visible">
+              <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#222" strokeWidth="10" strokeLinecap="round" />
+              <path d="M 10 50 A 40 40 0 0 1 35 18" fill="none" stroke="#ef4444" strokeWidth="10" strokeLinecap="round" />
+              <path d="M 35 18 A 40 40 0 0 1 65 18" fill="none" stroke="#eab308" strokeWidth="10" />
+              <path d="M 65 18 A 40 40 0 0 1 90 50" fill="none" stroke="#22c55e" strokeWidth="10" strokeLinecap="round" />
               
               {/* Pointer */}
               <g transform={`rotate(${pointerRotation}, 50, 45)`}>
                 {/* Pointer pointing to 0 (left) by default */}
-                <polygon points="50,40 50,50 15,45" fill="#10b981" className="drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]" />
+                <polygon points="50,42 50,48 20,45" fill="#fff" className="drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
               </g>
-              <circle cx="50" cy="45" r="5" fill="#10b981" />
+              <circle cx="50" cy="45" r="4" fill="#fff" />
             </svg>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
-              <span className="text-xl font-bold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">{data.fearAndGreed}</span>
-              <span className="text-[10px] uppercase text-foreground/60">{data.fearAndGreedLabel}</span>
+            <div className="absolute top-[40%] left-1/2 -translate-x-1/2 flex flex-col items-center">
+              <span className="text-2xl font-bold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] leading-none">{data.fearAndGreed}</span>
+            </div>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center w-full">
+              <span className={`text-[8px] font-bold uppercase px-2 py-0.5 rounded-full ${
+                data.fearAndGreed > 60 ? 'bg-green-500/20 text-green-400' :
+                data.fearAndGreed < 40 ? 'bg-red-500/20 text-red-400' :
+                'bg-yellow-500/20 text-yellow-400'
+              }`}>{data.fearAndGreedLabel}</span>
             </div>
           </div>
           <span className="text-[9px] text-foreground/40 mt-1">Market is {data.fearAndGreedLabel}</span>
@@ -159,19 +165,26 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
 
         <div className="flex flex-col gap-3">
           {currentList.map((coin, idx) => (
-            <div key={coin.id} className="flex items-center text-xs">
-              <span className="w-4 text-[10px] text-foreground/40">{idx + 1}</span>
-              <div className="flex items-center gap-2 flex-1">
-                <div className="w-4 h-4 rounded-full bg-slate-700 overflow-hidden flex items-center justify-center text-[8px] font-bold text-white shadow-inner shrink-0">
-                  {coin.symbol.charAt(0)}
+            <div key={coin.id} className="grid grid-cols-[16px_1fr_60px_50px] gap-2 items-center text-xs">
+              <span className="text-[10px] text-foreground/40 text-center">{idx + 1}</span>
+              <div className="flex items-center gap-2 min-w-0">
+                <div className="w-5 h-5 rounded-full overflow-hidden flex items-center justify-center bg-slate-700 shrink-0 border border-border/50">
+                  {coin.image ? (
+                    <img src={coin.image} alt={coin.symbol} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-[10px] font-bold text-white">{coin.symbol.charAt(0)}</span>
+                  )}
                 </div>
-                <span className="font-medium text-white/90 truncate max-w-[60px]">{coin.name}</span>
-                <span className="text-[10px] text-foreground/40">{coin.symbol}</span>
+                <span className="font-medium text-white/90 truncate">{coin.name}</span>
+                <span className="text-[9px] text-foreground/40 shrink-0 uppercase">{coin.symbol}</span>
               </div>
-              <div className="flex gap-4 text-right">
-                <span className="w-16 font-medium text-white/80 shrink-0 truncate">{coin.price}</span>
-                <span className={`w-12 font-medium shrink-0 ${coin.isUp ? 'text-green-500' : 'text-red-500'}`}>
-                  {coin.isUp ? '▲' : '▼'} {coin.change}
+              <span className="font-medium text-white/80 text-right truncate">{coin.price}</span>
+              <div className="text-right flex items-center justify-end gap-1">
+                <span className={`text-[8px] ${coin.isUp ? 'text-green-500' : 'text-red-500'}`}>
+                  {coin.isUp ? '▲' : '▼'}
+                </span>
+                <span className={`text-[10px] font-medium ${coin.isUp ? 'text-green-500' : 'text-red-500'}`}>
+                  {coin.change}
                 </span>
               </div>
             </div>

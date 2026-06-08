@@ -5,6 +5,7 @@ export interface CoinData {
   price: string;
   change: string;
   isUp: boolean;
+  image?: string;
 }
 
 export interface MarketData {
@@ -89,6 +90,7 @@ function mapCoinData(coin: any, index: number): CoinData {
     symbol: coin.symbol.toUpperCase(),
     price: formatCurrency(coin.current_price),
     change: `${Math.abs(coin.price_change_percentage_24h).toFixed(2)}%`,
-    isUp: coin.price_change_percentage_24h >= 0
+    isUp: coin.price_change_percentage_24h >= 0,
+    image: coin.image
   };
 }
