@@ -44,34 +44,7 @@ export default function SubscribePage() {
           </div>
 
           {/* Right Form */}
-          <div className="skeuo-card p-8 md:p-12 rounded-[32px] relative group">
-            
-            {/* Spotlight Hover Effect */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] pointer-events-none z-20 flex justify-center">
-              
-              {/* Light Beam (Sharp Cone) */}
-              <div 
-                className="absolute top-0 w-[400px] h-0 group-hover:h-[350px] bg-gradient-to-b from-[#ff6b00]/40 via-[#ff6b00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-[800ms] ease-out origin-top" 
-                style={{ 
-                  clipPath: 'polygon(46% 0, 54% 0, 100% 100%, 0 100%)',
-                }}
-              ></div>
-
-              {/* Glowing Edge on Card Top (Intense core) */}
-              <div className="absolute top-0 w-[150px] h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_20px_10px_rgba(255,107,0,0.8)]"></div>
-              {/* Secondary wider orange glow on edge */}
-              <div className="absolute top-0 w-[250px] h-[2px] bg-gradient-to-r from-transparent via-[#ff6b00] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_30px_15px_rgba(255,107,0,0.5)]"></div>
-
-              {/* Emitter Icon (Half-in, half-out) */}
-              <div className="absolute -top-4 w-8 h-8 rounded-full bg-[#111] border-[2px] border-white shadow-[0_0_15px_5px_rgba(255,107,0,0.6)] flex items-center justify-center opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out z-30">
-                {/* Custom Triangle Icon */}
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4L20 18H4L12 4Z" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <circle cx="12" cy="13" r="2.5" fill="black" />
-                </svg>
-              </div>
-            </div>
-
+          <div className="skeuo-card p-8 md:p-12 rounded-[32px] relative">
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded-[32px] pointer-events-none"></div>
             
             <form className="relative z-10 flex flex-col gap-6">
