@@ -63,30 +63,34 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
         {/* Left: Market Mood */}
         <div className="flex flex-col items-center">
           <span className="text-[10px] text-foreground/50 uppercase tracking-wider mb-2 self-start font-medium">Market Mood</span>
-          <div className="relative w-32 h-20 overflow-hidden mt-2 flex flex-col items-center">
+          <div className="relative w-32 flex flex-col items-center mt-2">
             {/* SVG Gauge */}
-            <svg viewBox="0 0 100 60" className="w-full h-full overflow-visible">
+            <svg viewBox="0 0 100 55" className="w-full overflow-visible">
               <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#222" strokeWidth="10" strokeLinecap="round" />
               <path d="M 10 50 A 40 40 0 0 1 35 18" fill="none" stroke="#ef4444" strokeWidth="10" strokeLinecap="round" />
               <path d="M 35 18 A 40 40 0 0 1 65 18" fill="none" stroke="#eab308" strokeWidth="10" />
               <path d="M 65 18 A 40 40 0 0 1 90 50" fill="none" stroke="#22c55e" strokeWidth="10" strokeLinecap="round" />
               
               {/* Pointer */}
-              <g transform={`rotate(${pointerRotation}, 50, 45)`}>
+              <g transform={`rotate(${pointerRotation}, 50, 50)`}>
                 {/* Pointer pointing to 0 (left) by default */}
-                <polygon points="50,42 50,48 20,45" fill="#fff" className="drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
+                <polygon points="50,47 50,53 15,50" fill="#fff" className="drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
               </g>
-              <circle cx="50" cy="45" r="4" fill="#fff" />
+              <circle cx="50" cy="50" r="4" fill="#fff" />
             </svg>
-            <div className="absolute top-[40%] left-1/2 -translate-x-1/2 flex flex-col items-center">
-              <span className="text-2xl font-bold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] leading-none">{data.fearAndGreed}</span>
-            </div>
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center w-full">
+            
+            {/* Text Below Gauge */}
+            <div className="flex flex-col items-center mt-1 space-y-1">
+              <span className="text-2xl font-bold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] leading-none">
+                {data.fearAndGreed}
+              </span>
               <span className={`text-[8px] font-bold uppercase px-2 py-0.5 rounded-full ${
                 data.fearAndGreed > 60 ? 'bg-green-500/20 text-green-400' :
                 data.fearAndGreed < 40 ? 'bg-red-500/20 text-red-400' :
                 'bg-yellow-500/20 text-yellow-400'
-              }`}>{data.fearAndGreedLabel}</span>
+              }`}>
+                {data.fearAndGreedLabel}
+              </span>
             </div>
           </div>
           <span className="text-[9px] text-foreground/40 mt-1">Market is {data.fearAndGreedLabel}</span>
