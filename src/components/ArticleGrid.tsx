@@ -26,7 +26,7 @@ export function ArticleGrid() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {category.articles.map((article, idx) => (
               <Link href={`/article/${article.slug}`} key={idx} className="flex flex-col gap-4 group">
-                <div className={`w-full aspect-[4/3] rounded-xl overflow-hidden glass relative group-hover:shadow-[0_0_15px_rgba(255,107,0,0.4)] transition-all`}>
+                <div className={`w-full aspect-[4/3] rounded-xl overflow-hidden glass relative velocity-glow-hover`}>
                    <Image 
                      src={article.img} 
                      alt={article.title} 

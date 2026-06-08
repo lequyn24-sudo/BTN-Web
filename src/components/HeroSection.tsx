@@ -11,7 +11,7 @@ export async function HeroSection() {
 
   return (
     <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-      <Link href={`/article/${featuredArticle.slug}`} className="lg:col-span-2 relative rounded-2xl overflow-hidden glass group cursor-pointer h-full min-h-[450px] block">
+      <Link href={`/article/${featuredArticle.slug}`} className="lg:col-span-2 relative rounded-2xl overflow-hidden glass group cursor-pointer h-full min-h-[450px] block velocity-glow-hover">
         <Image 
           src={featuredArticle.img} 
           alt={featuredArticle.title} 
