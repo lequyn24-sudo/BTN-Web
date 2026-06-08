@@ -53,7 +53,7 @@ export function Header() {
               Projects
             </button>
             <button className="hidden sm:flex btn-primary">
-              Start Now
+              Subscribe
             </button>
           </div>
         </div>
