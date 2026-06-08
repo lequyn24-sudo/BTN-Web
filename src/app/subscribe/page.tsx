@@ -47,24 +47,27 @@ export default function SubscribePage() {
           <div className="skeuo-card p-8 md:p-12 rounded-[32px] relative group">
             
             {/* Spotlight Hover Effect */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] pointer-events-none z-20 flex justify-center">
-              {/* Light Beam */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] pointer-events-none z-20 flex justify-center">
+              
+              {/* Light Beam (Sharp Cone) */}
               <div 
-                className="absolute top-0 w-full h-0 group-hover:h-[350px] bg-gradient-to-b from-[#ff6b00]/60 via-[#ff6b00]/15 to-transparent blur-[25px] opacity-0 group-hover:opacity-100 transition-all duration-[1200ms] ease-out mix-blend-screen origin-top" 
+                className="absolute top-0 w-[400px] h-0 group-hover:h-[350px] bg-gradient-to-b from-[#ff6b00]/40 via-[#ff6b00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-[800ms] ease-out origin-top" 
                 style={{ 
-                  clipPath: 'polygon(40% 0, 60% 0, 100% 100%, 0 100%)',
+                  clipPath: 'polygon(46% 0, 54% 0, 100% 100%, 0 100%)',
                 }}
               ></div>
 
-              {/* Glowing Edge on Card Top */}
-              <div className="absolute top-0 w-[200px] h-[2px] bg-gradient-to-r from-transparent via-[#ff6b00] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 shadow-[0_0_20px_5px_rgba(255,107,0,0.8)]"></div>
+              {/* Glowing Edge on Card Top (Intense core) */}
+              <div className="absolute top-0 w-[150px] h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_20px_10px_rgba(255,107,0,0.8)]"></div>
+              {/* Secondary wider orange glow on edge */}
+              <div className="absolute top-0 w-[250px] h-[2px] bg-gradient-to-r from-transparent via-[#ff6b00] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_30px_15px_rgba(255,107,0,0.5)]"></div>
 
-              {/* Emitter Icon */}
-              <div className="absolute -top-5 w-10 h-10 rounded-full bg-[#050505] border-[3px] border-white/90 shadow-[0_0_40px_15px_rgba(255,107,0,0.7)] flex items-center justify-center opacity-0 group-hover:opacity-100 transform -translate-y-8 group-hover:translate-y-0 transition-all duration-700 ease-out">
-                {/* Custom Icon resembling the reference */}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L22 20H2L12 2Z" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <circle cx="12" cy="14" r="3" fill="black" />
+              {/* Emitter Icon (Half-in, half-out) */}
+              <div className="absolute -top-4 w-8 h-8 rounded-full bg-[#111] border-[2px] border-white shadow-[0_0_15px_5px_rgba(255,107,0,0.6)] flex items-center justify-center opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out z-30">
+                {/* Custom Triangle Icon */}
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4L20 18H4L12 4Z" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="13" r="2.5" fill="black" />
                 </svg>
               </div>
             </div>
