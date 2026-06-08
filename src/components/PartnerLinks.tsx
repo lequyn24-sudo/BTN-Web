@@ -4,7 +4,7 @@ import { ArrowRight, Activity, ScrollText, Gem, Bitcoin } from "lucide-react";
 
 const linksData = [
   {
-    title: "cmc",
+    title: "CMC",
     desc: "Live data, rankings, and insights powered by CoinMarketCap.",
     linkText: "EXPLORE CMC",
     url: "/category/cmc",

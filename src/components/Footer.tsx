@@ -8,7 +8,7 @@ export function Footer() {
   const categories = [
     "Alt Coin News", "Bitcoin News", "Blockchain Event", "Crypto News",
     "Millionaire", "Mining", "News", "Other",
-    "Press Release", "Sponsored Articles", "Top Project", "cmc"
+    "Press Release", "Sponsored Articles", "Top Project", "CMC"
   ];
 
   const company = ["About Us", "Contact Us", "Advertise With Us", "Careers", "Write For Us"];

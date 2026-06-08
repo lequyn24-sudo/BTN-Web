@@ -38,7 +38,7 @@ export const categoriesData = [
   { title: "Top Project", slug: "top-project", articles: generateArticles("Top Project", 10) },
   { title: "Other", slug: "other", articles: generateArticles("Other", 10) },
   { title: "Sponsored Articles", slug: "sponsored-articles", articles: generateArticles("Sponsored Articles", 10) },
-  { title: "cmc", slug: "cmc", articles: generateArticles("cmc", 10) },
+  { title: "CMC", slug: "cmc", articles: generateArticles("CMC", 10) },
   { title: "Press Release", slug: "press-release", articles: generateArticles("Press Release", 10) },
   { title: "Millionaire", slug: "millionaire", articles: generateArticles("Millionaire", 10) },
 ];
