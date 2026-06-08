@@ -4,6 +4,7 @@ import { MarketTicker } from "@/components/MarketTicker";
 import { HeroSection } from "@/components/HeroSection";
 import { ArticleGrid } from "@/components/ArticleGrid";
 import { Sidebar } from "@/components/Sidebar";
+import { BlockchainEvents } from "@/components/BlockchainEvents";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <MarketTicker />
       <main className="container mx-auto px-4 py-8 flex-1">
         <HeroSection />
+        
+        <BlockchainEvents />
         
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Main Content Area (approx 70%) */}

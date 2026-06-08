@@ -47,3 +47,42 @@ export const getArticleBySlug = (slug: string) => {
   }
   return null;
 };
+
+export const eventsList = [
+  {
+    title: "Consensus 2024",
+    location: "Austin, Texas",
+    date: "10-12",
+    month: "JUN",
+    description: "The biggest Web3 event of the year returns.",
+    img: "/mockups/1280X1280_1779175249LXbBvv3v8j-768x432.png",
+    link: "#"
+  },
+  {
+    title: "ETHGlobal Prague",
+    location: "Prague, Czech Republic",
+    date: "20-22",
+    month: "MAY",
+    description: "Building the future of Ethereum together.",
+    img: "/mockups/kraken-us-compliant-bitcoin-perpetual-contracts-launch-30-days-thumbnail-768x512.jpg",
+    link: "#"
+  },
+  {
+    title: "Bitcoin 2024",
+    location: "Nashville, Tennessee",
+    date: "5-6",
+    month: "JUN",
+    description: "The world's largest Bitcoin conference.",
+    img: "/mockups/sui-mainnet-suffers-multiple-disruptions-thumbnail-1-768x512.jpg",
+    link: "#"
+  },
+  {
+    title: "Token2049 Dubai",
+    location: "Dubai, UAE",
+    date: "15-16",
+    month: "JUN",
+    description: "Where the global crypto industry connects.",
+    img: "/mockups/vaneck-debuts-us-spot-bnb-etf-thumbnail-768x512.jpg",
+    link: "#"
+  }
+];
