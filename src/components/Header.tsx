@@ -68,9 +68,9 @@ export function Header() {
               </Link>
             )}
             
-            <button className="hidden lg:flex btn-secondary whitespace-nowrap">
+            <Link href="/contact" className="hidden lg:flex btn-secondary whitespace-nowrap">
               Sponsorship
-            </button>
+            </Link>
             <Link href="/subscribe" className="hidden sm:flex btn-primary whitespace-nowrap">
               Subscribe
             </Link>
