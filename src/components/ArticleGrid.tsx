@@ -25,20 +25,18 @@ export function ArticleGrid() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {category.articles.map((article, idx) => (
-              <Link href={`/article/${article.slug}`} key={idx} className="flex flex-col gap-4 group">
-                <div className="w-full aspect-[4/3] rounded-xl glass relative velocity-glow-hover">
-                  <div className="absolute inset-0 rounded-xl overflow-hidden">
-                    <Image 
-                      src={article.img} 
-                      alt={article.title} 
-                      fill 
-                      className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                  </div>
+              <Link href={`/article/${article.slug}`} key={idx} className="flex flex-col gap-4 group skeuo-card velocity-glow-hover p-3 transition-transform hover:-translate-y-1">
+                <div className="w-full aspect-[4/3] rounded-lg relative overflow-hidden shadow-inner">
+                  <Image 
+                    src={article.img} 
+                    alt={article.title} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-sm leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-3">
+                <div className="px-1">
+                  <h3 className="font-semibold text-sm leading-snug mb-2 text-white group-hover:text-primary transition-colors line-clamp-3">
                     {article.title}
                   </h3>
                   <div className="flex items-center gap-2 text-[10px] text-foreground/50">

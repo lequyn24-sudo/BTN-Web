@@ -11,19 +11,19 @@ export async function HeroSection() {
 
   return (
     <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-      <Link href={`/article/${featuredArticle.slug}`} className="lg:col-span-2 relative rounded-2xl glass group cursor-pointer h-full min-h-[450px] block velocity-glow-hover">
-        <div className="absolute inset-0 rounded-2xl overflow-hidden">
+      <Link href={`/article/${featuredArticle.slug}`} className="lg:col-span-2 relative rounded-2xl skeuo-card velocity-glow-hover group cursor-pointer h-full min-h-[450px] block p-4 transition-transform hover:-translate-y-1">
+        <div className="absolute inset-4 rounded-xl overflow-hidden shadow-inner">
           <Image 
             src={featuredArticle.img} 
             alt={featuredArticle.title} 
             fill 
-            className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+            className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
         </div>
         
-        <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 md:p-10 pointer-events-none">
+        <div className="absolute inset-4 z-20 flex flex-col justify-end p-6 md:p-10 pointer-events-none">
           <span className="bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full w-max mb-4 shadow-[0_0_10px_rgba(255,107,0,0.5)]">
             Bitcoin News
           </span>
