@@ -88,12 +88,18 @@ export function Sidebar() {
               Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </div>
           </div>
-          <div className="w-[80px] h-[80px] relative shrink-0 -mr-2 group-hover:scale-110 transition-transform duration-500">
+          <div 
+            className="w-[100px] h-[100px] relative shrink-0 -mr-4 group-hover:scale-110 transition-transform duration-500"
+            style={{ 
+              WebkitMaskImage: 'radial-gradient(circle at center, black 50%, transparent 75%)', 
+              maskImage: 'radial-gradient(circle at center, black 50%, transparent 75%)' 
+            }}
+          >
             <Image 
               src="/mockups/3d_megaphone.png" 
               alt="Megaphone" 
               fill 
-              className="object-contain drop-shadow-[0_0_20px_rgba(255,107,0,0.4)] mix-blend-screen"
+              className="object-contain mix-blend-screen contrast-[1.3] brightness-[0.8]"
             />
           </div>
         </div>
