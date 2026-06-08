@@ -57,7 +57,7 @@ export function MarketWidget({ initialData }: { initialData: MarketData | null }
   const pointerRotation = (data.fearAndGreed / 100) * 180;
 
   return (
-    <div className="glass rounded-2xl p-5 h-full flex flex-col justify-between border-border bg-[#0a0a0a]/80 shadow-2xl shadow-black/50 w-full max-w-sm mx-auto lg:max-w-none">
+    <div className="skeuo-card rounded-[24px] p-6 h-full flex flex-col justify-between w-full max-w-sm mx-auto lg:max-w-none">
       {/* Top Section */}
       <div className="grid grid-cols-2 gap-4 border-b border-border/50 pb-5">
         {/* Left: Market Mood */}

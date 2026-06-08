@@ -41,14 +41,16 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
               </div>
             </div>
 
-            <div className="w-full aspect-video rounded-2xl overflow-hidden glass relative mb-10 shadow-[0_0_30px_rgba(255,107,0,0.15)] border-primary/20">
-               <Image 
-                 src={article.img} 
-                 alt={article.title} 
-                 fill 
-                 className="object-cover"
-                 priority
-               />
+            <div className="w-full aspect-video relative rounded-[24px] skeuo-card mb-10 p-2 shadow-[0_0_30px_rgba(255,107,0,0.15)]">
+               <div className="absolute inset-2 rounded-[16px] overflow-hidden shadow-inner">
+                 <Image 
+                   src={article.img} 
+                   alt={article.title} 
+                   fill 
+                   className="object-cover"
+                   priority
+                 />
+               </div>
             </div>
 
             <div className="prose prose-invert prose-orange max-w-none prose-lg">
@@ -66,7 +68,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
                 Major financial institutions are no longer standing on the sidelines. The influx of capital through regulated vehicles like ETFs has created a new baseline for market stability. This isn't just about price discovery; it's about the fundamental integration of blockchain technology into traditional finance.
               </p>
 
-              <div className="glass p-6 my-8 rounded-xl border-l-4 border-l-primary bg-primary/5">
+              <div className="skeuo-card p-6 my-8 rounded-[20px] border-l-4 border-l-primary">
                 <p className="italic text-lg text-foreground/90 m-0">
                   "The current market dynamics suggest we are entering a maturation phase. The focus is shifting from short-term speculation to long-term utility and network growth."
                 </p>

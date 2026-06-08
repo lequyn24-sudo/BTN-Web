@@ -44,8 +44,8 @@ export default function SubscribePage() {
           </div>
 
           {/* Right Form */}
-          <div className="glass p-8 md:p-12 rounded-3xl border border-border relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="skeuo-card p-8 md:p-12 rounded-[32px] relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded-[32px] pointer-events-none"></div>
             
             <form className="relative z-10 flex flex-col gap-6">
               <div className="flex flex-col gap-2">

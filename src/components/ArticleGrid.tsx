@@ -25,8 +25,8 @@ export function ArticleGrid() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {category.articles.map((article, idx) => (
-              <Link href={`/article/${article.slug}`} key={idx} className="flex flex-col gap-4 group skeuo-card velocity-glow-hover p-3 transition-transform hover:-translate-y-1">
-                <div className="w-full aspect-[4/3] rounded-lg relative overflow-hidden shadow-inner">
+              <Link href={`/article/${article.slug}`} key={idx} className="flex flex-col gap-4 group skeuo-card velocity-glow-hover p-[6px] rounded-[20px] transition-transform hover:-translate-y-1">
+                <div className="w-full aspect-[4/3] rounded-[14px] relative overflow-hidden shadow-inner">
                   <Image 
                     src={article.img} 
                     alt={article.title} 
@@ -35,7 +35,7 @@ export function ArticleGrid() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 </div>
-                <div className="px-1">
+                <div className="px-3 pb-3 pt-2">
                   <h3 className="font-semibold text-sm leading-snug mb-2 text-white group-hover:text-primary transition-colors line-clamp-3">
                     {article.title}
                   </h3>

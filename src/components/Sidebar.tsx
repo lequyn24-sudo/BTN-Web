@@ -10,9 +10,9 @@ export function Sidebar() {
   const mostRead = categoriesData.flatMap(c => c.articles).slice(0, 5);
 
   return (
-    <aside className="w-full flex flex-col gap-8">
+    <aside className="flex flex-col gap-6 w-full lg:w-80 shrink-0">
       {/* Trending Tags */}
-      <div className="glass rounded-2xl p-6">
+      <div className="skeuo-card rounded-[24px] p-6">
         <h3 className="font-bold text-lg uppercase tracking-wide mb-4">Trending Tags</h3>
         <div className="flex flex-wrap gap-2">
           {trendingTags.map((tag) => (
@@ -24,7 +24,7 @@ export function Sidebar() {
       </div>
 
       {/* Most Read */}
-      <div className="glass rounded-2xl p-6">
+      <div className="skeuo-card rounded-[24px] p-6">
         <h3 className="font-bold text-lg uppercase tracking-wide mb-6">Most Read</h3>
         <div className="flex flex-col gap-6">
           {mostRead.map((item, idx) => (
@@ -48,7 +48,7 @@ export function Sidebar() {
       </div>
 
       {/* Stay Ahead Subscribe */}
-      <div className="glass rounded-2xl p-6 border-primary/30 relative overflow-hidden">
+      <div className="skeuo-card rounded-[24px] p-6 relative overflow-hidden">
         <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/20 blur-2xl rounded-full"></div>
         <h3 className="font-bold text-xl mb-2 relative z-10 text-white">Stay Ahead in Crypto</h3>
         <p className="text-sm text-foreground/70 mb-4 relative z-10">Get the latest news, market updates, and exclusive insights straight to your inbox.</p>

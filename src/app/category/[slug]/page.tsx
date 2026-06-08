@@ -29,13 +29,13 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {category.articles.map((article, idx) => (
-            <Link href={`/article/${article.slug}`} key={idx} className="flex flex-col gap-4 group">
-              <div className={`w-full aspect-[4/3] rounded-xl overflow-hidden glass relative group-hover:shadow-[0_0_15px_rgba(255,107,0,0.4)] transition-all`}>
+            <Link href={`/article/${article.slug}`} key={idx} className="flex flex-col gap-4 group skeuo-card velocity-glow-hover p-[6px] rounded-[20px] transition-transform hover:-translate-y-1">
+              <div className={`w-full aspect-[4/3] rounded-[14px] overflow-hidden shadow-inner relative`}>
                  <Image 
                    src={article.img} 
                    alt={article.title} 
                    fill 
-                   className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                   className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                  <div className="absolute top-4 left-4">
@@ -44,7 +44,7 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
                    </span>
                  </div>
               </div>
-              <div>
+              <div className="px-3 pb-3 pt-2">
                 <h3 className="font-semibold text-base leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-3 text-white">
                   {article.title}
                 </h3>

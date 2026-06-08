@@ -65,7 +65,7 @@ export default function ProfileLayout({
             
             {/* Sidebar */}
             <aside className="w-full lg:w-64 shrink-0">
-              <div className="glass rounded-2xl p-6 border-border/50 sticky top-24">
+              <div className="skeuo-card rounded-[24px] p-6 sticky top-24">
                 
                 {/* User Summary */}
                 <div className="flex items-center gap-4 mb-8 pb-6 border-b border-border/50">
@@ -125,7 +125,7 @@ export default function ProfileLayout({
 
             {/* Main Content Area */}
             <div className="flex-1">
-              <div className="glass rounded-2xl p-8 md:p-10 border-border/50 min-h-[600px]">
+              <div className="skeuo-card rounded-[24px] p-8 md:p-10 min-h-[600px]">
                 {children}
               </div>
             </div>
