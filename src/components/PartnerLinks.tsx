@@ -50,20 +50,6 @@ export function PartnerLinks() {
           return (
             <Link href={item.url} key={idx} className="flex items-start gap-4 group skeuo-card velocity-glow-hover p-5 rounded-[20px] transition-transform hover:-translate-y-1 relative overflow-hidden">
               
-              {item.bgImage && (
-                <div 
-                  className="absolute right-0 top-0 bottom-0 w-[70%] z-0"
-                  style={{ WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)', maskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}
-                >
-                  <Image 
-                    src={item.bgImage} 
-                    alt="" 
-                    fill 
-                    className="object-cover opacity-30 group-hover:scale-110 transition-transform duration-700 group-hover:opacity-40 blur-md scale-105" 
-                  />
-                </div>
-              )}
-              
               <div className={`w-12 h-12 rounded-full overflow-hidden relative shrink-0 z-10 border border-border/50 shadow-inner flex items-center justify-center ${item.iconBg}`}>
                 <Icon className={`w-6 h-6 ${item.iconColor}`} />
               </div>
