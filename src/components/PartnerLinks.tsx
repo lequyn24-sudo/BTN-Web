@@ -52,14 +52,17 @@ export function PartnerLinks() {
             <Link href={item.url} key={idx} className="flex items-start gap-4 group skeuo-card velocity-glow-hover p-5 rounded-[20px] transition-transform hover:-translate-y-1 relative overflow-hidden">
               
               {item.bgImage && (
-                <div className="absolute right-0 top-0 bottom-0 w-[60%] z-0">
+                <div 
+                  className="absolute right-0 top-0 bottom-0 w-[70%] z-0"
+                  style={{ WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)', maskImage: 'linear-gradient(to right, transparent 0%, black 40%)' }}
+                >
                   <Image 
                     src={item.bgImage} 
                     alt="" 
                     fill 
-                    className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" 
+                    className="object-cover opacity-30 group-hover:scale-105 transition-transform duration-700 group-hover:opacity-40" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
                 </div>
               )}
               
