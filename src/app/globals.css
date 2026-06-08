@@ -177,3 +177,9 @@
   }
 }
 
+html.light .header-footer-adaptive {
+  background-color: #000000 !important;
+  --foreground: #f8fafc;
+  --border: rgba(255, 107, 0, 0.2);
+}
+
