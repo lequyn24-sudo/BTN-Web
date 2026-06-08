@@ -99,7 +99,54 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-[#FF6B00] to-[#FFA03A] text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-[0_0_15px_rgba(255,107,0,0.4)] hover:shadow-[0_0_25px_rgba(255,107,0,0.6)] hover:scale-105;
+    background: linear-gradient(180deg, #e35a00 0%, #4a1100 100%);
+    color: #fff;
+    border-radius: 9999px;
+    padding: 10px 28px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.9);
+    box-shadow: 
+      inset 0 1px 0px rgba(255, 255, 255, 0.9),
+      inset 0 8px 15px rgba(255, 255, 255, 0.2),
+      inset 0 -8px 12px rgba(0, 0, 0, 1),
+      0 0 0 2px #0f0f0f,
+      0 0 0 4px #9c3c00,
+      0 0 20px rgba(255, 80, 0, 0.4),
+      0 5px 15px rgba(0, 0, 0, 0.6);
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: linear-gradient(180deg, #2a2a2a 0%, #000000 100%);
+    color: #f0f0f0;
+    border-radius: 9999px;
+    padding: 8px 20px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.9);
+    box-shadow: 
+      inset 0 1px 0px rgba(255, 255, 255, 0.6),
+      inset 0 6px 12px rgba(255, 255, 255, 0.05),
+      inset 0 -8px 12px rgba(0, 0, 0, 1),
+      0 0 0 2px #0f0f0f,
+      0 0 0 3px #555555,
+      0 5px 15px rgba(0, 0, 0, 0.6);
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
   }
 }
 

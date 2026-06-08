@@ -48,15 +48,16 @@ export function Header() {
           <button className="p-2 lg:hidden hover:text-primary transition-colors text-white" aria-label="Menu">
             <Menu className="w-5 h-5" />
           </button>
-          <Link
-            href="/subscribe"
-            className="hidden sm:flex btn-primary"
-          >
-            Subscribe
-          </Link>
+          <div className="flex items-center gap-3">
+            <button className="hidden sm:flex btn-secondary">
+              Projects
+            </button>
+            <button className="hidden sm:flex btn-primary">
+              Start Now
+            </button>
+          </div>
         </div>
       </div>
     </header>
   );
 }
-
