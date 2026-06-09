@@ -67,13 +67,17 @@ export function Footer() {
           <div className="w-full lg:w-[15%]">
             <h4 className="font-semibold mb-6 text-sm text-foreground">Company</h4>
             <ul className="space-y-3">
-              {company.map((item) => (
-                <li key={item}>
-                  <Link href={`/about/${item.toLowerCase().replace(/ /g, "-")}`} className="text-[13px] text-foreground/60 hover:text-primary transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {company.map((item) => {
+                const slug = item.toLowerCase().replace(/ /g, "-");
+                const href = item === "Contact Us" ? "/contact" : `/about/${slug}`;
+                return (
+                  <li key={item}>
+                    <Link href={href} className="text-[13px] text-foreground/60 hover:text-primary transition-colors">
+                      {item}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
