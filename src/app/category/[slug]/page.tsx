@@ -46,10 +46,10 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
                  {category.slug === "blockchain-event" && (
                    <div className="absolute top-4 right-4 bg-[#0a0a0a] border border-[#333] rounded-lg px-3 py-2 flex flex-col items-center justify-center shadow-lg min-w-[50px] z-10">
                      <span className="text-[10px] font-bold text-white/70 uppercase tracking-widest leading-none mb-1">
-                       {article.date.split(" ")[0]?.substring(0, 3).toUpperCase()}
+                       {article.eventMonth}
                      </span>
                      <span className="text-sm font-bold text-white leading-none">
-                       {article.date.split(" ")[1]?.replace(",", "")}
+                       {article.eventDate}
                      </span>
                    </div>
                  )}

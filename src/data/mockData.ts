@@ -25,7 +25,9 @@ export const generateArticles = (categoryTitle: string, count: number = 10) => {
       date: `May ${15 - (i % 10)}, 2026`,
       time: `${3 + (i % 5)} MIN READ`,
       img: mockups[imgIndex],
-      excerpt: "The latest developments in the crypto space bring exciting new opportunities and challenges. Analysts are closely watching key support levels as institutional adoption continues to shape the market landscape."
+      excerpt: "The latest developments in the crypto space bring exciting new opportunities and challenges. Analysts are closely watching key support levels as institutional adoption continues to shape the market landscape.",
+      eventDate: `${10 + (i % 20)}`,
+      eventMonth: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"][i % 12],
     };
   });
 };
