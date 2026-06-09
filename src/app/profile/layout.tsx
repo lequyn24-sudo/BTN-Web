@@ -65,7 +65,7 @@ export default function ProfileLayout({
             
             {/* Sidebar */}
             <aside className="w-full lg:w-64 shrink-0">
-              <div className="skeuo-card rounded-[24px] p-6 sticky top-24">
+              <div className="skeuo-card rounded-[24px] p-6 h-full flex flex-col">
                 
                 {/* User Summary */}
                 <div className="flex items-center gap-4 mb-8 pb-6 border-b border-border/50">
@@ -79,7 +79,7 @@ export default function ProfileLayout({
                 </div>
 
                 {/* Navigation */}
-                <nav className="flex flex-col gap-6">
+                <nav className="flex flex-col gap-6 flex-1">
                   {menuGroups.map((group) => (
                     <div key={group.title}>
                       <h3 className="text-[10px] font-bold text-foreground/40 uppercase tracking-wider mb-3 px-3">
@@ -124,8 +124,8 @@ export default function ProfileLayout({
             </aside>
 
             {/* Main Content Area */}
-            <div className="flex-1">
-              <div className="skeuo-card rounded-[24px] p-8 md:p-10 min-h-[600px]">
+            <div className="flex-1 flex flex-col">
+              <div className="skeuo-card rounded-[24px] p-8 md:p-10 flex-1 min-h-[600px] h-full">
                 {children}
               </div>
             </div>
