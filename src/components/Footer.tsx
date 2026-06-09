@@ -7,8 +7,8 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export function Footer() {
   const categories = [
-    "Alt Coin News", "Bitcoin News", "Blockchain Event", "Crypto News",
-    "Millionaire", "Mining", "News", "Other",
+    "Alt Coin News", "Bitcoin News", "Blockchain Event",
+    "Millionaire", "Mining", "Other",
     "Press Release", "Sponsored Articles", "Top Project", "CMC"
   ];
 
