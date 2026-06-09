@@ -9,7 +9,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function AboutPage({ params }: { params: { slug: string } }) {
+export default async function AboutPage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const data = aboutData[params.slug as keyof typeof aboutData];
 
   if (!data) {
