@@ -123,11 +123,11 @@ export function Footer() {
           </p>
           <div className="flex gap-4 items-center">
             <ThemeToggle />
-            <select className="bg-transparent border border-border rounded-md px-2 py-1 text-sm outline-none focus:border-primary">
+            <select className="bg-[#0a0a0a] border border-border rounded-md px-2 py-1 text-sm outline-none focus:border-primary text-white">
               <option value="en">English</option>
               <option value="vi">Tiếng Việt</option>
             </select>
-            <select className="bg-transparent border border-border rounded-md px-2 py-1 text-sm outline-none focus:border-primary">
+            <select className="bg-[#0a0a0a] border border-border rounded-md px-2 py-1 text-sm outline-none focus:border-primary text-white">
               <option value="usd">USD</option>
               <option value="vnd">VND</option>
             </select>
